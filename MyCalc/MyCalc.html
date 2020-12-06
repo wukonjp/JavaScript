@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCalc</title>
+    <link rel="stylesheet" type="text/css" href="MyCalc.css">
+    <script type="text/javascript" src="MyCalc.js" charset="utf-8"></script>
+    <script>
+        window.onload = function () {
+            gCalc = new Calc(
+                document.getElementById("displayText"),
+                document.getElementById("operatorText")
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <div id="grid">
+        <div id="display">
+            <div id="operatorText"></div>
+            <div id="displayText"></div>
+        </div>
+        <button id="Num0" class="number horizontal" type="button" onclick="gCalc.SetNumber('0');">０</button>
+        <button id="Num1" class="number square" type="button" onclick="gCalc.SetNumber('1');">１</button>
+        <button id="Num2" class="number square" type="button" onclick="gCalc.SetNumber('2');">２</button>
+        <button id="Num3" class="number square" type="button" onclick="gCalc.SetNumber('3');">３</button>
+        <button id="Num4" class="number square" type="button" onclick="gCalc.SetNumber('4');">４</button>
+        <button id="Num5" class="number square" type="button" onclick="gCalc.SetNumber('5');">５</button>
+        <button id="Num6" class="number square" type="button" onclick="gCalc.SetNumber('6');">６</button>
+        <button id="Num7" class="number square" type="button" onclick="gCalc.SetNumber('7');">７</button>
+        <button id="Num8" class="number square" type="button" onclick="gCalc.SetNumber('8');">８</button>
+        <button id="Num9" class="number square" type="button" onclick="gCalc.SetNumber('9');">９</button>
+        <button id="Dot" class="number square" type="button" onclick="gCalc.SetNumber('.');">．</button>
+        <button id="Add" class="operator vertical" type="button" onclick="gCalc.SetOperator('+');">＋</button>
+        <button id="Subtract" class="operator square" type="button" onclick="gCalc.SetOperator('-');">－</button>
+        <button id="Multiply" class="operator square" type="button" onclick="gCalc.SetOperator('*');">×</button>
+        <button id="Divide" class="operator square" type="button" onclick="gCalc.SetOperator('/');">÷</button>
+        <button id="Clear" class="action square" type="button" onclick="gCalc.Clear();">Ｃ</button>
+        <button id="Equal" class="action vertical" type="button" onclick="gCalc.Equal();">＝</button>
+        <button id="Rate55" class="rate square" type="button" onclick="gCalc.Rate(55);">55%</button>
+        <button id="Rate60" class="rate square" type="button" onclick="gCalc.Rate(60);">60%</button>
+        <button id="Rate65" class="rate square" type="button" onclick="gCalc.Rate(65);">65%</button>
+        <button id="Rate70" class="rate square" type="button" onclick="gCalc.Rate(70);">70%</button>
+        <button id="Rate75" class="rate square" type="button" onclick="gCalc.Rate(75);">75%</button>
+    </div>
+</body>
+
+</html>
