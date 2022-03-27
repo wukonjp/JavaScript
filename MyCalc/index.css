@@ -176,3 +176,9 @@
     height: 70px;
     width: 140px;
 }
+
+#ren_footer {
+    border-radius: 8px;
+    height: 105px;
+    width: 350px;
+}

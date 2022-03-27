@@ -11,8 +11,8 @@
           "type": "image/vnd.microsoft.icon"
         },
         {
-            "src": "necopuri144x144",
-            "sizes": "144x144",
+            "src": "ren500x500",
+            "sizes": "500x500",
             "type": "image/png"
           }
       ]
