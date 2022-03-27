@@ -1,0 +1,19 @@
+{
+    "lang": "ja-jp",
+    "name": "値引き電卓",
+    "short_name": "値引き電卓",
+    "start_url": "index.html",
+    "display": "standalone",
+    "icons": [
+        {
+          "src": "favicon.ico",
+          "sizes": "48x48",
+          "type": "image/vnd.microsoft.icon"
+        },
+        {
+            "src": "necopuri144x144",
+            "sizes": "144x144",
+            "type": "image/png"
+          }
+      ]
+}
