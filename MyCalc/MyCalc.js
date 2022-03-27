@@ -23,23 +23,23 @@ class Calc {
     #UpdateDisplay() {
         switch (this.#phaseState) {
             case Phase.Item1Wait:
-                this.#operatorElement.innerText = "(^q^)";
+                this.#operatorElement.innerText = "(・∀・)＜ 俺様はV1.01だ";
                 this.#displayElement.innerText = "0";
                 break;
             case Phase.Item1Input:
-                this.#operatorElement.innerText = "(^q^)";
+                this.#operatorElement.innerText = "(# ^ω^)＜ 早くしる";
                 this.#displayElement.innerText = this.#item1;
                 break;
             case Phase.Item2Wait:
-                this.#operatorElement.innerText = this.#item1 + this.#operator;
+                this.#operatorElement.innerText = "(# ﾟДﾟ)＜ " + this.#item1 + this.#operator;
                 this.#displayElement.innerText = this.#item1;
                 break;
             case Phase.Item2Input:
-                this.#operatorElement.innerText = this.#item1 + this.#operator;
+                this.#operatorElement.innerText = "(# ﾟДﾟ)＜ " + this.#item1 + this.#operator;
                 this.#displayElement.innerText = this.#item2;
                 break;
             case Phase.Result:
-                this.#operatorElement.innerText = this.#item1 + this.#operator + this.#item2 + "=";
+                this.#operatorElement.innerText = "(・∀・)＜ " + this.#item1 + this.#operator + this.#item2 + "=";
                 this.#displayElement.innerText = this.#result;
                 break;
             default:
@@ -70,22 +70,28 @@ class Calc {
         return (source).toFixed(0);
     }
     #Operate() {
+        let temp = "";
         switch (this.#operator) {
             case '+':
-                this.#result = this.#ToRealString(Number(this.#item1) + Number(this.#item2));
+                temp = String(this.#ToRealString(Number(this.#item1) + Number(this.#item2)));
                 break;
             case '-':
-                this.#result = this.#ToRealString(Number(this.#item1) - Number(this.#item2));
+                temp = String(this.#ToRealString(Number(this.#item1) - Number(this.#item2)));
                 break;
             case '*':
-                this.#result = this.#ToRealString(Number(this.#item1) * Number(this.#item2));
+                temp = String(this.#ToRealString(Number(this.#item1) * Number(this.#item2)));
                 break;
             case '/':
-                this.#result = this.#ToRealString(Number(this.#item1) / Number(this.#item2));
+                temp = String(this.#ToRealString(Number(this.#item1) / Number(this.#item2)));
                 break;
             default:
                 break;
         }
+        if(temp.length > 9)
+        {
+            temp = "Overflow";
+        }
+        this.#result = temp;
     }
     #ApplyRate(rate) {
         this.#item2 = (rate * 0.01).toFixed(2);
