@@ -1,9 +1,9 @@
 Phase = {
-    Item1Wait: 0,
-    Item1Input: 1,
-    Item2Wait: 2,
-    Item2Input: 3,
-    Result: 4
+    Item1Wait: 0,       // 1つ目の数の入力待ち
+    Item1Input: 1,      // 1つ目の数の入力中
+    Item2Wait: 2,       // 2つ目の数の入力待ち
+    Item2Input: 3,      // 2つ目の数の入力中
+    Result: 4           // 計算結果表示中
 }
 
 class Calc {
@@ -23,7 +23,7 @@ class Calc {
     #UpdateDisplay() {
         switch (this.#phaseState) {
             case Phase.Item1Wait:
-                this.#operatorElement.innerText = "(・∀・)＜ 俺様はV1.01だ";
+                this.#operatorElement.innerText = "(・∀・)＜ 入力待ち";
                 this.#displayElement.innerText = "0";
                 break;
             case Phase.Item1Input:
@@ -47,7 +47,7 @@ class Calc {
         }
     }
     #ConcatNumber(source, number) {
-        if (source.length >= 9) {
+        if (source.length >= 8) {
             return source;
         }
         if (number == ".") {
@@ -67,22 +67,23 @@ class Calc {
         return source + number;
     }
     #ToRealString(source) {
-        return (source).toFixed(0);
+        let temp = source.toFixed(7);
+        return String(Math.ceil(temp));
     }
     #Operate() {
         let temp = "";
         switch (this.#operator) {
             case '+':
-                temp = String(this.#ToRealString(Number(this.#item1) + Number(this.#item2)));
+                temp = this.#ToRealString(Number(this.#item1) + Number(this.#item2));
                 break;
             case '-':
-                temp = String(this.#ToRealString(Number(this.#item1) - Number(this.#item2)));
+                temp = this.#ToRealString(Number(this.#item1) - Number(this.#item2));
                 break;
             case '*':
-                temp = String(this.#ToRealString(Number(this.#item1) * Number(this.#item2)));
+                temp = this.#ToRealString(Number(this.#item1) * Number(this.#item2));
                 break;
             case '/':
-                temp = String(this.#ToRealString(Number(this.#item1) / Number(this.#item2)));
+                temp = this.#ToRealString(Number(this.#item1) / Number(this.#item2));
                 break;
             default:
                 break;
