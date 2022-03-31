@@ -23,7 +23,7 @@ class Calc {
     #UpdateDisplay() {
         switch (this.#phaseState) {
             case Phase.Item1Wait:
-                this.#operatorElement.innerText = "(# ^ω^)＜ 1円未満切り捨てるお";
+                this.#operatorElement.innerText = "(# ^ω^)＜ Are you ready?";
                 this.#displayElement.innerText = "0";
                 break;
             case Phase.Item1Input:

@@ -107,14 +107,16 @@
     grid-column: 4 / span 1;
 }
 
-#Rate55 {
+#Rate75 {
     grid-row: 2 / span 1;
     grid-column: 5 / span 1;
 }
 
-#Rate60 {
+#Rate70 {
     grid-row: 3 / span 1;
     grid-column: 5 / span 1;
+    background: #2b2b2b;
+    color: #fbfaf5;
 }
 
 #Rate65 {
@@ -122,15 +124,22 @@
     grid-column: 5 / span 1;
 }
 
-#Rate70 {
+#Rate60 {
     grid-row: 5 / span 1;
     grid-column: 5 / span 1;
 }
 
-#Rate75 {
+#Rate55 {
     grid-row: 6 / span 1;
     grid-column: 5 / span 1;
 }
+
+#ren_footer {
+    border-radius: 8px;
+    height: 105px;
+    width: 350px;
+}
+
 /* ここから */
 .number {
     font-size: 30px;
@@ -177,8 +186,3 @@
     width: 140px;
 }
 
-#ren_footer {
-    border-radius: 8px;
-    height: 105px;
-    width: 350px;
-}
